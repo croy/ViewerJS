@@ -76,6 +76,10 @@ function Viewer(viewerPlugin, parameters) {
         /**@const*/
         UI_FADE_DURATION = 5000;
 
+    if (typeof parameters.scrollbarPadding === 'number') {
+        kScrollbarPadding = parameters.scrollbarPadding;
+    }
+
     function isBlankedOut() {
         return (blanked.style.display === 'block');
     }
